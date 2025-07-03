@@ -58,7 +58,8 @@ This is a Spring Boot application designed to manage user data (such as administ
 
 ![Screenshot 2025-07-03 153736](https://github.com/user-attachments/assets/0ed2c37b-0332-433a-a1d2-f4d42d1cf42f)
 
-![Screenshot 2025-07-03 153751](https://github.com/user-attachments/assets/733ccd68-67b2-4892-b35b-af10426c0b09)
+![Screenshot 2025-07-03 153801](https://github.com/user-attachments/assets/eec8cb38-ccec-4024-8e69-a20aa273b138)
+
 
 ---
 
