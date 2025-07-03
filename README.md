@@ -52,6 +52,16 @@ This is a Spring Boot application designed to manage user data (such as administ
 
 ---
 
+### Working Process:
+
+![Screenshot 2025-07-03 153751](https://github.com/user-attachments/assets/62ee3a4d-402d-4e81-af54-777654cf1630)
+
+![Screenshot 2025-07-03 153736](https://github.com/user-attachments/assets/0ed2c37b-0332-433a-a1d2-f4d42d1cf42f)
+
+![Screenshot 2025-07-03 153751](https://github.com/user-attachments/assets/733ccd68-67b2-4892-b35b-af10426c0b09)
+
+---
+
 ### My Contributions and Learning
 
 This backend was built as part of a hands-on learning experience in Spring Boot and database integration. Through this project, I gained practical exposure in:
