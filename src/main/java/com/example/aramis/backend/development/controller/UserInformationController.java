@@ -7,49 +7,49 @@ Created for educational purposes
  */
 
 import com.example.aramis.backend.development.model.UserInformation;
-import com.example.aramis.backend.development.repository.UserInformationRepository;
+import com.example.aramis.backend.development.service.UserInformationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/users")
 public class UserInformationController {
 
     @Autowired
-    private UserInformationRepository userInformationRepository;
+    private UserInformationService userInformationService;
 
     // GET all users
     @GetMapping
     public List<UserInformation> getAllUsers() {
-        return userInformationRepository.findAll();
+        return userInformationService.getAllUsers();
     }
 
     // GET one user by ID
     @GetMapping("/{id}")
-    public Optional<UserInformation> getUserById(@PathVariable String id) {
-        return userInformationRepository.findById(id);
+    public Optional<UserInformation> getUserById(@PathVariable UUID id) {
+        return userInformationService.getUserById(id);
     }
 
     // POST new user
     @PostMapping
     public UserInformation createUser(@RequestBody UserInformation userInfo) {
-        return userInformationRepository.save(userInfo);
+        return userInformationService.createUser(userInfo);
     }
 
     // PUT update user
     @PutMapping("/{id}")
-    public UserInformation updateUser(@PathVariable String id, @RequestBody UserInformation userInfo) {
-        userInfo.setUserId(id);
-        return userInformationRepository.save(userInfo);
+    public UserInformation updateUser(@PathVariable UUID id, @RequestBody UserInformation userInfo) {
+        return userInformationService.updateUser(id, userInfo);
     }
 
     // DELETE user
     @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable String id) {
-        userInformationRepository.deleteById(id);
+    public void deleteUser(@PathVariable UUID id) {
+        userInformationService.deleteUser(id);
     }
 }
 

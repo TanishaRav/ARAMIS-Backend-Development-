@@ -7,55 +7,31 @@ Created for educational purposes
  */
 
 import jakarta.persistence.*;
-        import java.time.LocalDate;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
-@Table(name = "userinformation") // must match the table name in Postgres exactly
+@Table(name = "userinformation") // Matches Postgres table name
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserInformation {
 
     @Id
-    @Column(name = "userid")
-    private String userId;
+    @GeneratedValue
+    @Column(name = "userid", updatable = false, nullable = false, columnDefinition = "uuid")
+    private UUID userId;
 
-    @Column(name = "userrole")
+    @Column(name = "userrole", nullable = false)
     private String userRole;
 
-    @Column(name = "creationdate")
+    @Column(name = "creationdate", nullable = false)
     private LocalDate creationDate;
 
-    @Column(name = "lastchangeddate")
+    @Column(name = "lastchangeddate", nullable = false)
     private LocalDate lastChangedDate;
-
-    // Getters and Setters
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public String getUserRole() {
-        return userRole;
-    }
-
-    public void setUserRole(String userRole) {
-        this.userRole = userRole;
-    }
-
-    public LocalDate getCreationDate() {
-        return creationDate;
-    }
-
-    public void setCreationDate(LocalDate creationDate) {
-        this.creationDate = creationDate;
-    }
-
-    public LocalDate getLastChangedDate() {
-        return lastChangedDate;
-    }
-
-    public void setLastChangedDate(LocalDate lastChangedDate) {
-        this.lastChangedDate = lastChangedDate;
-    }
 }
