@@ -18,8 +18,8 @@ This is a Spring Boot application designed to manage user data (such as administ
 - **Java 17**
 - **Spring Boot**
 - **Spring Data JPA**
-- **H2 Database (for local testing)**
-- **Postman** (for API requests)
+- **PostgreSQL**
+- **Postman**
 
 ---
 
@@ -27,16 +27,18 @@ This is a Spring Boot application designed to manage user data (such as administ
 ### 1. Open in IDE
 
 - Open the project folder in IntelliJ or VS Code.
-- Make sure your `pom.xml` or `build.gradle` dependencies are installed.
+- Ensure that Maven dependencies in `pom.xml` are correctly installed.
 
 ### 2. Configure PostgreSQL
 
-- Make changes to your application.properties file 
-- Make sure PostgreSQL is running and your database connection is tested. 
+- Created a custom database named **AramisUserDatabase**.
+- Used pgAdmin to set up a table `UserInformation` with matching fields from the `UserInformation` entity.
+- Made necessary configurations in the `application.properties` file to connect Spring Boot to PostgreSQL.
 
 ### 3. Run the Application
 
-- Run your Spring Boot application and connect to the local host on port 8080 after connecting it to your database.
+- Run the Spring Boot application locally (port 8080).
+- Once the application is live, you can begin testing endpoints via Postman.
 
 ---
 
@@ -54,36 +56,36 @@ This is a Spring Boot application designed to manage user data (such as administ
 
 ### Working Process:
 
-![Screenshot 2025-07-03 153751](https://github.com/user-attachments/assets/62ee3a4d-402d-4e81-af54-777654cf1630)
+![Screenshot 2025-07-04 144412](https://github.com/user-attachments/assets/f3c678b3-8788-450c-acf5-9e188590a20d)
 
-![Screenshot 2025-07-03 153736](https://github.com/user-attachments/assets/0ed2c37b-0332-433a-a1d2-f4d42d1cf42f)
+![Screenshot 2025-07-04 144437](https://github.com/user-attachments/assets/cbbef1b5-27a2-45ef-9ae7-1cede4047e2b)
 
-![Screenshot 2025-07-03 153801](https://github.com/user-attachments/assets/eec8cb38-ccec-4024-8e69-a20aa273b138)
+![Screenshot 2025-07-04 144505](https://github.com/user-attachments/assets/6a9b0091-4f79-420d-b5c9-a1479e85143b)
 
 
 ---
 
 ### My Contributions and Learning
 
-This backend was built as part of a hands-on learning experience in Spring Boot and database integration. Through this project, I gained practical exposure in:
+To complete this project, I independently set up the **AramisUserDatabase**, wrote RESTful API endpoints using Spring Boot, and created the full backend logic for managing user records.
 
-- Structuring a REST API using Spring Boot
+Through this experience, I learned how to:
 
-- Connecting and persisting data using PostgreSQL
+- Create structured backend logic using service and controller layers.
+- Set up a PostgreSQL database from scratch to mirror entity fields.
+- Test and verify API functionality using Postman collections.
+- Debug issues related to data persistence and HTTP request handling.
 
-- Performing CRUD operations and testing endpoints with Postman
-
-- Debugging issues related to endpoints, status codes, and data persistence
-
-I would like to thank Mrs. Apeksha Mahale, my mentor, for guiding me throughout this project. Her feedback helped me understand Spring Boot architecture more deeply and encouraged me to resolve challenges independently.
+I would like to sincerely thank **Mrs. Apeksha Mahale**, my mentor, for her guidance throughout the process. Her detailed instructions helped me stay on track, while also allowing room for me to explore and resolve issues independently.
 
 ---
 
 ### Learning Outcome:
 
-- Learned to perform CRUD Operations successfully.
-- Learned to use various tools such as springboot, Maven, Postman, pgAdmin, etc.
-- Learnt methods to do reverse engineering and create JPA entities and databases.
+- Learned to perform complete CRUD operations in a backend environment.
+- Gained hands-on experience using Spring Boot, Maven, PostgreSQL, and Postman.
+- Learned to reverse-engineer databases and generate JPA entities.
+- Understood how to organize Java classes into model, repository, controller, and service layers.
 
 ---
 
@@ -99,3 +101,4 @@ Student at Iowa State University | Alstom Intern
 ## License
 
 This project was built for educational purposes.
+
